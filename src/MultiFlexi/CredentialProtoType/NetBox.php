@@ -18,7 +18,7 @@ namespace MultiFlexi\CredentialProtoType;
 /**
  * NetBox REST API credential prototype.
  *
- * Supplies NETBOXURL + NETBOXTOKEN to MultiFlexi applications
+ * Supplies NETBOX_URL + NETBOX_TOKEN to MultiFlexi applications
  * (e.g. isp-tools NetBoxer backend).
  *
  * @author Vitex <info@vitexsoftware.cz>
@@ -33,10 +33,10 @@ class NetBox extends \MultiFlexi\CredentialProtoType implements \MultiFlexi\cred
     {
         parent::__construct();
 
-        $urlField = new \MultiFlexi\ConfigField('NETBOXURL', 'url', _('NetBox URL'), _('NetBox instance base URL'));
+        $urlField = new \MultiFlexi\ConfigField('NETBOX_URL', 'url', _('NetBox URL'), _('NetBox instance base URL'));
         $urlField->setHint('https://netbox.example.com')->setValue('');
 
-        $tokenField = new \MultiFlexi\ConfigField('NETBOXTOKEN', 'password', _('NetBox API Token'), _('NetBox API authentication token'));
+        $tokenField = new \MultiFlexi\ConfigField('NETBOX_TOKEN', 'password', _('NetBox API Token'), _('NetBox API authentication token'));
         $tokenField->setHint('')->setValue('');
 
         $this->configFieldsProvided->addField($urlField);
@@ -88,13 +88,13 @@ class NetBox extends \MultiFlexi\CredentialProtoType implements \MultiFlexi\cred
     #[\Override]
     public function checkAvailability(): \MultiFlexi\CredentialCheckResult
     {
-        $url = (string) ($this->configFieldsProvided->getFieldByCode('NETBOXURL')?->getValue() ?? '');
-        $token = (string) ($this->configFieldsProvided->getFieldByCode('NETBOXTOKEN')?->getValue() ?? '');
+        $url = (string) ($this->configFieldsProvided->getFieldByCode('NETBOX_URL')?->getValue() ?? '');
+        $token = (string) ($this->configFieldsProvided->getFieldByCode('NETBOX_TOKEN')?->getValue() ?? '');
 
         if ($url === '' || $token === '') {
             $missing = array_keys(array_filter([
-                'NETBOXURL' => $url === '',
-                'NETBOXTOKEN' => $token === '',
+                'NETBOX_URL' => $url === '',
+                'NETBOX_TOKEN' => $token === '',
             ]));
 
             return new \MultiFlexi\CredentialCheckResult(
@@ -139,7 +139,7 @@ class NetBox extends \MultiFlexi\CredentialProtoType implements \MultiFlexi\cred
         if ($httpCode === 401 || $httpCode === 403) {
             return new \MultiFlexi\CredentialCheckResult(
                 \MultiFlexi\CredentialState::Misconfigured,
-                sprintf(_('Authentication failed (HTTP %d) — check NETBOXTOKEN'), $httpCode),
+                sprintf(_('Authentication failed (HTTP %d) — check NETBOX_TOKEN'), $httpCode),
                 time(),
             );
         }

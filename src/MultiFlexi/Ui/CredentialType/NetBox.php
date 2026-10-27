@@ -24,8 +24,8 @@ class NetBox extends \MultiFlexi\Ui\CredentialFormHelperPrototype
 {
     public function finalize(): void
     {
-        $urlField = $this->credential->getFields()->getFieldByCode('NETBOXURL');
-        $tokenField = $this->credential->getFields()->getFieldByCode('NETBOXTOKEN');
+        $urlField = $this->credential->getFields()->getFieldByCode('NETBOX_URL');
+        $tokenField = $this->credential->getFields()->getFieldByCode('NETBOX_TOKEN');
 
         $url = $urlField ? (string) $urlField->getValue() : '';
         $token = $tokenField ? (string) $tokenField->getValue() : '';
@@ -102,7 +102,7 @@ class NetBox extends \MultiFlexi\Ui\CredentialFormHelperPrototype
         if ($httpCode === 401 || $httpCode === 403) {
             return [
                 'success' => false,
-                'message' => sprintf(_('Authentication failed (HTTP %d) — check NETBOXTOKEN'), $httpCode),
+                'message' => sprintf(_('Authentication failed (HTTP %d) — check NETBOX_TOKEN'), $httpCode),
                 'info' => [],
             ];
         }

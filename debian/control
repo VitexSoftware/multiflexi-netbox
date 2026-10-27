@@ -14,8 +14,8 @@ Multi-Arch: foreign
 Depends: ${misc:Depends}, php-vitexsoftware-multiflexi-core, multiflexi-cli (>= 2.2.0)
 Description: MultiFlexi NetBox credential prototype
  NetBox REST API credential prototype for MultiFlexi core.
- Provides the CredentialProtoType class that defines NETBOXURL and
- NETBOXTOKEN configuration fields used by applications such as isp-tools.
+ Provides the CredentialProtoType class that defines NETBOX_URL and
+ NETBOX_TOKEN configuration fields used by applications such as isp-tools.
 
 Package: multiflexi-netbox-ui
 Architecture: all

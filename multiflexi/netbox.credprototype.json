@@ -21,14 +21,14 @@
   ],
   "fields": [
     {
-      "keyword": "NETBOXURL",
+      "keyword": "NETBOX_URL",
       "type": "url",
       "name": "NetBox URL",
       "description": "NetBox instance base URL",
       "required": true
     },
     {
-      "keyword": "NETBOXTOKEN",
+      "keyword": "NETBOX_TOKEN",
       "type": "password",
       "name": "NetBox API Token",
       "description": "NetBox API authentication token",

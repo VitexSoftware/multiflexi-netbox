@@ -2,7 +2,7 @@
 
 ## Purpose
 
-MultiFlexi credential prototype for NetBox REST API (`NETBOXURL`, `NETBOXTOKEN`).
+MultiFlexi credential prototype for NetBox REST API (`NETBOX_URL`, `NETBOX_TOKEN`).
 
 ## Layout
 
@@ -13,10 +13,10 @@ MultiFlexi credential prototype for NetBox REST API (`NETBOXURL`, `NETBOXTOKEN`)
 
 ## Consumers
 
-- `isp-tools` NetBoxer (`Ease\Shared::cfg('NETBOXURL'|'NETBOXTOKEN')`)
+- `isp-tools` NetBoxer (`Ease\Shared::cfg('NETBOX_URL'|'NETBOX_TOKEN')`)
 - Any MultiFlexi app with `"requirements": ["NetBox"]`
 
 ## Do not
 
 - Do not run `composer` in postinst
-- Do not rename field keywords (`NETBOXURL` / `NETBOXTOKEN` match isp-tools)
+- Do not rename field keywords (`NETBOX_URL` / `NETBOX_TOKEN` match isp-tools)

@@ -8,7 +8,7 @@
   <description>
     <p>
       Provides the NetBox credential prototype for MultiFlexi core, defining
-      the NETBOXURL and NETBOXTOKEN configuration fields required to talk to
+      the NETBOX_URL and NETBOX_TOKEN configuration fields required to talk to
       a NetBox IPAM / DCIM instance.
     </p>
     <p>

@@ -50,8 +50,8 @@ class NetBoxTest extends TestCase
     public function testFieldsProvided(): void
     {
         $fields = $this->proto->fieldsProvided();
-        $this->assertNotNull($fields->getFieldByCode('NETBOXURL'));
-        $this->assertNotNull($fields->getFieldByCode('NETBOXTOKEN'));
+        $this->assertNotNull($fields->getFieldByCode('NETBOX_URL'));
+        $this->assertNotNull($fields->getFieldByCode('NETBOX_TOKEN'));
     }
 
     public function testCheckAvailabilityMisconfiguredWithoutValues(): void

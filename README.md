@@ -4,7 +4,7 @@
 ![Packaging: deb](https://img.shields.io/badge/packaging-.deb-red?logo=debian&logoColor=white)
 
 Provides the **NetBox** credential prototype for
-[MultiFlexi](https://multiflexi.eu/): `NETBOXURL` + `NETBOXTOKEN`.
+[MultiFlexi](https://multiflexi.eu/): `NETBOX_URL` + `NETBOX_TOKEN`.
 
 ## Packages
 
@@ -17,10 +17,10 @@ Provides the **NetBox** credential prototype for
 
 | Keyword | Type | Purpose |
 |---------|------|---------|
-| `NETBOXURL` | url | NetBox base URL (e.g. `https://netbox-dev.spojenet.cz/`) |
-| `NETBOXTOKEN` | password | API token (`Authorization: Token …`) |
+| `NETBOX_URL` | url | NetBox base URL (e.g. `https://netbox-dev.spojenet.cz/`) |
+| `NETBOX_TOKEN` | password | API token (`Authorization: Token …`) |
 
-`checkAvailability()` calls `GET {NETBOXURL}/api/status/`.
+`checkAvailability()` calls `GET {NETBOX_URL}/api/status/`.
 
 ## Usage
 
