@@ -1,0 +1,9 @@
+multiflexi-netbox (0.1.0) UNRELEASED; urgency=medium
+
+  * Initial release
+  * NetBox credential prototype (NETBOXURL, NETBOXTOKEN)
+  * checkAvailability() probes /api/status/ with Token auth
+  * Optional UI package probes status and shows NetBox version/plugins
+  * postinst runs multiflexi-cli credential-prototype:sync
+
+ -- Vítězslav Dvořák <info@vitexsoftware.cz>  Tue, 27 Oct 2026 16:30:00 +0200

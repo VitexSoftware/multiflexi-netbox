@@ -1,0 +1,26 @@
+Source: multiflexi-netbox
+Section: web
+Priority: optional
+Maintainer: "Vítězslav Dvořák" <info@vitexsoftware.cz>
+Build-Depends:
+ debhelper-compat (= 13),
+Standards-Version: 4.7.0
+Homepage: https://github.com/VitexSoftware/multiflexi-netbox
+Rules-Requires-Root: no
+
+Package: multiflexi-netbox
+Architecture: all
+Multi-Arch: foreign
+Depends: ${misc:Depends}, php-vitexsoftware-multiflexi-core, multiflexi-cli (>= 2.2.0)
+Description: MultiFlexi NetBox credential prototype
+ NetBox REST API credential prototype for MultiFlexi core.
+ Provides the CredentialProtoType class that defines NETBOXURL and
+ NETBOXTOKEN configuration fields used by applications such as isp-tools.
+
+Package: multiflexi-netbox-ui
+Architecture: all
+Multi-Arch: foreign
+Depends: ${misc:Depends}, multiflexi-netbox (= ${binary:Version}), multiflexi-web|multiflexi-web5
+Description: MultiFlexi NetBox UI components
+ NetBox credential dialog for MultiFlexi web interface.
+ Probes /api/status/ with the configured token and shows version info.

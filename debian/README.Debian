@@ -1,0 +1,13 @@
+multiflexi-netbox for Debian
+----------------------------
+
+After installation the postinst runs:
+
+  multiflexi-cli credential-prototype:sync
+
+which registers the NetBox credential prototype (code: NetBox) in the
+MultiFlexi database. Create a company credential with NETBOXURL and
+NETBOXTOKEN, then assign it to runtemplates that require "NetBox".
+
+Applications such as isp-tools (blocknet / unblocknet) consume these
+environment variables via the NetBoxer network backend.

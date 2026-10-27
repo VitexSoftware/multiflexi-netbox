@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="addon">
+  <id>eu.multiflexi.multiflexi_netbox</id>
+  <metadata_license>MIT</metadata_license>
+  <project_license>MIT</project_license>
+  <name>MultiFlexi NetBox</name>
+  <summary>NetBox REST API credential prototype for MultiFlexi</summary>
+  <description>
+    <p>
+      Provides the NetBox credential prototype for MultiFlexi core, defining
+      the NETBOXURL and NETBOXTOKEN configuration fields required to talk to
+      a NetBox IPAM / DCIM instance.
+    </p>
+    <p>
+      Also ships a web UI component that probes /api/status/ with the
+      configured token and displays NetBox version and plugin information.
+    </p>
+  </description>
+  <icon type="stock">multiflexi-netbox</icon>
+  <url type="homepage">https://github.com/VitexSoftware/multiflexi-netbox</url>
+  <url type="bugtracker">https://github.com/VitexSoftware/multiflexi-netbox/issues</url>
+  <extends>eu.multiflexi.multiflexi</extends>
+  <categories>
+    <category>Network</category>
+    <category>Office</category>
+  </categories>
+  <provides>
+    <library>MultiFlexi/CredentialProtoType/NetBox.php</library>
+  </provides>
+  <releases>
+    <release version="0.1.0" date="2026-10-27" />
+  </releases>
+  <developer id="eu.multiflexi">
+    <name>Vítězslav Dvořák</name>
+  </developer>
+  <content_rating type="oars-1.1" />
+</component>

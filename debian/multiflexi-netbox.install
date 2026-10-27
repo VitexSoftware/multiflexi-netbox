@@ -1,0 +1,4 @@
+src/MultiFlexi/CredentialProtoType/NetBox.php  usr/share/php/MultiFlexi/CredentialProtoType/
+src/images/NetBox.svg                           usr/share/multiflexi/images/
+multiflexi-netbox.svg                           usr/share/icons/hicolor/scalable/apps/
+debian/eu.multiflexi.multiflexi_netbox.metainfo.xml  usr/share/metainfo/

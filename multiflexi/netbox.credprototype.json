@@ -1,0 +1,38 @@
+{
+  "$schema": "https://raw.githubusercontent.com/VitexSoftware/php-vitexsoftware-multiflexi-core/refs/heads/main/schema/credential-prototype.json",
+  "uuid": "49767570-3daa-45b9-9e64-94070f9455fc",
+  "code": "NetBox",
+  "name": {
+    "en": "NetBox",
+    "cs": "NetBox"
+  },
+  "description": {
+    "en": "NetBox REST API credentials for IPAM / DCIM integration",
+    "cs": "Přihlašovací údaje k NetBox REST API pro IPAM / DCIM"
+  },
+  "version": "1.0",
+  "logo": "NetBox.svg",
+  "homepage": "https://github.com/VitexSoftware/multiflexi-netbox",
+  "tags": [
+    "NetBox",
+    "IPAM",
+    "DCIM",
+    "Network"
+  ],
+  "fields": [
+    {
+      "keyword": "NETBOXURL",
+      "type": "url",
+      "name": "NetBox URL",
+      "description": "NetBox instance base URL",
+      "required": true
+    },
+    {
+      "keyword": "NETBOXTOKEN",
+      "type": "password",
+      "name": "NetBox API Token",
+      "description": "NetBox API authentication token",
+      "required": true
+    }
+  ]
+}
