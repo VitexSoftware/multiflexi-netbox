@@ -23,6 +23,20 @@ class NetBoxTest extends TestCase
     public function testClassExists(): void
     {
         $this->assertTrue(class_exists(NetBox::class));
-        $this->assertTrue(is_subclass_of(NetBox::class, \MultiFlexi\Ui\CredentialFormHelperPrototype::class));
+    }
+
+    public function testExtendsCredentialFormHelperPrototype(): void
+    {
+        if (!class_exists(\MultiFlexi\Ui\CredentialFormHelperPrototype::class)) {
+            $this->markTestSkipped('multiflexi-web UI helpers not installed');
+        }
+
+        $reflection = new \ReflectionClass(NetBox::class);
+        $this->assertTrue($reflection->isSubclassOf(\MultiFlexi\Ui\CredentialFormHelperPrototype::class));
+    }
+
+    public function testHasFinalizeMethod(): void
+    {
+        $this->assertTrue(method_exists(NetBox::class, 'finalize'));
     }
 }

@@ -14,3 +14,15 @@ declare(strict_types=1);
  */
 
 require_once __DIR__.'/../vendor/autoload.php';
+
+// UI helpers ship with multiflexi-web / multiflexi-web5, not multiflexi-core.
+foreach ([
+    '/usr/lib/multiflexi/MultiFlexi/Ui/CredentialFormHelperPrototype.php',
+    '/usr/lib/multiflexi-web/MultiFlexi/Ui/CredentialFormHelperPrototype.php',
+    '/usr/lib/multiflexi-web5/MultiFlexi/Ui/CredentialFormHelperPrototype.php',
+] as $uiHelper) {
+    if (is_readable($uiHelper)) {
+        require_once $uiHelper;
+        break;
+    }
+}
